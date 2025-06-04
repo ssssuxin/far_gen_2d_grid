@@ -375,7 +375,7 @@ void DPVisualizer::VizContourGraph(const CTNodeStack& contour_graph)
     {
         for(double x_lo=Polygon_[i].bbox.xmin;x_lo<Polygon_[i].bbox.xmax;x_lo=x_lo+grid_map.info.resolution)//开始遍历bbox点
         {
-            for(double y_lo=Polygon_[i].bbox.ymin;y_lo<Polygon_[i].bbox.ymax;y_lo=y_lo+grid_map.info.resolution)
+            for(double y_lo=Polygon_[i].bbox.ymin+grid_map.info.resolution;y_lo<Polygon_[i].bbox.ymax;y_lo=y_lo+grid_map.info.resolution)
             {
                 test_point.x=x_lo;
                 test_point.y=y_lo;
